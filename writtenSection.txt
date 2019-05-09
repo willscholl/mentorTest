@@ -1,29 +1,31 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
-
+  Semantic HTML adds meaning to elements, for example <header>, <table>, <nav> these are semantic, they define their own content. 
+  Ecamples of non semantic tags are <div>, <span>
 2. What is the box model?
-
+  At the very bottom of the inspect tab, A box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
 3. What is the difference between IDs and Classes?
-
+  In CSS classes can be used to identify multple elements whereas ID's are used to identify one sepcific element
 4. What is z-index (CSS property) useful for?
-
+  z-index is used to bring forward elements above others, the stack order. It can only be used on elements with position 
 5. Summarize what the keyword 'this' is used for?
-
+  I am assuming in the context of JavaScript
+  To my undestanding, this referes to the object that is executing the current function. If the function is not withing an object then this will reffer to the global object or the window.
 6. What is a callback? What are common uses for callbacks in JavaScript?
-
+  callbacks are functions that are passed into other functions as an argument and executed within the parent function. They are most commonly used for continuing code execution, I have used them mainly when I want more than one thing to happen before the parent fucntion is finished
 7. What is a closure and why is it useful?
-
+  Closures are functions that remeber the enviorment they are created in and have access to the independent variables within its scope. They are most useful for data privacy
 8. How does a prototype work?
-
+  prototype associates functions with objects
 9. Describe what a component-based framework/library is?
-
+  A component based library is a way of engineering code into smaller reusable parts.
 10. What is the component lifecycle in React?
-
+  the lifecycle of a component includes 3 steps, when the component mounts, updates, and then unmounting
 11. What is REST? (not just a description of the acronym)
-
+  To my undestanding REST is a way to implement and use the HTTP protocol
 12. Name three common ways of getting data from a request (in Express.JS):
-
+  I might be misinterpreting the question but to my understanding data come back from a request on the body, it can also come through req.params and req.query
 
 
 -- =====================
@@ -37,9 +39,13 @@ email varchar(255)
 13. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
-
+  SELECT * FROM users
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
-
+  INSERT INTO users (name, email)
+  VALUES ('William', 'fake@fake.com')
 -Update the newly created user's name to 'Bobby Boy':
-
+  UPDATE users SET user.name = 'Bobby Boy' 
+  WHERE user.name = 'William'
 -Delete the newly updated user:
+  DELETE FROM users
+  WHERE name = 'Bobby Boy'
